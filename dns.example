@@ -1,0 +1,13 @@
+provider "dnsimple" {
+  email = "not-a-real-email@fake.lol"
+  token = "abcd1234"
+  }
+
+resource "dnsimple_record" "example" {
+  domain = "terraform.rocks"
+  type = "A"
+  name = "anything"
+  value = "${aws_instance.web.0.public_ip}"
+  }
+
+
