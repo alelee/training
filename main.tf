@@ -57,7 +57,7 @@ resource "aws_instance" "web" {
   tags {
     Identity    = "autodesk-bison"
     Name        = "web${count.index+1}/${var.num_webs}" 
-#    Name1	= "web 2"
+    Environment	= "Production"
   }
 }
 
